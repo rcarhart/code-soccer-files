@@ -22,19 +22,19 @@ shots.groupby('match_id').sum()[sum_cols].head()
 shots.groupby('match_id').agg({
     'goal': 'sum',
     'attempt': 'count',
-    'dist': 'mean'}).head()
+    'dist_m': 'mean'}).head()
 
 shots.groupby('match_id').agg(
     goal = ('goal', 'sum'),
     attempt = ('attempt', 'count'),
-    ave_dist = ('dist', 'mean')).head()
+    ave_dist = ('dist_m', 'mean')).head()
 
 shots_team = shots.groupby(['match_id', 'team_id']).agg(
     goal = ('goal', 'sum'),
     attempt = ('attempt', 'count'),
-    ave_dist = ('dist', 'mean'),
-    min_dist = ('dist', 'min'),
-    max_dist = ('dist', 'max'))
+    ave_dist = ('dist_m', 'mean'),
+    min_dist = ('dist_m', 'min'),
+    max_dist = ('dist_m', 'max'))
 
 shots_team.head()
 
