@@ -2,9 +2,9 @@ import requests
 from pandas import DataFrame
 import pandas as pd
 
-fc_url = 'https://fantasyfootballcalculator.com/api/v1/adp/ppr?teams=12&year=2020'
+fp_url = https://fantasy.premierleague.com/api/bootstrap-static/
 
-resp = requests.get(fc_url)
+fpl_resp = requests.get(fp_url)
 
 df = DataFrame(resp.json()['players'])
 df.head()
