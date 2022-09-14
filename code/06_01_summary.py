@@ -248,7 +248,7 @@ g.savefig(path.join(FIG_DIR, 'no_passes_by_position.png'))
 # shot charts
 #############
 
-dfs[['name', 'dist', 'foot', 'goal', 'x1', 'y1']].head(5)
+dfs[['name', 'dist_m', 'foot', 'goal', 'x1', 'y1']].head(5)
 
 dfs['x'] = dfs['x1']*120/100
 dfs['y'] = (100 - dfs['y1'])*75/100
