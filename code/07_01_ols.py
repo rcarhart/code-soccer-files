@@ -16,7 +16,7 @@ df['goal'] = df['goal'].astype(int)
 
 df[['goal', 'dist_m', 'dist_m_sq']].head()
 
-model = smf.ols(formula='goal ~ dist_m + dist_m_sq', data=df)
+model = smf.ols(formula='goal ~ dist_m + dist_m_sql', data=df)
 results = model.fit()
 
 results.summary2()
