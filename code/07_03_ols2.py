@@ -11,7 +11,7 @@ dfp = pd.read_csv(path.join(DATA_DIR, 'players.csv'))
 
 dfs['goal'] = dfs['goal'].astype(int)
 dfs['header'] = dfs['foot'] == 'head/body'
-dfs['dist_m_sq'] = dfs['dist_m'] ** 2
+dfs['dist_m_sql'] = dfs['dist_m'] ** 2
 
 #########################
 # holding things constant
